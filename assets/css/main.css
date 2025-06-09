@@ -2,6 +2,8 @@
       --forest-green: #345b34;
       --deep-ocean-blue: #005477 ;
       --golden-sunset: #FFA500;
+      --transition: all 0.3s ease;
+      --border-radius: 8px;
     }
     body {
       font-family: "Montserrat", sans-serif;
@@ -192,3 +194,172 @@
 .service-item svg{
   color: var(--deep-ocean-blue);
 }
+        /* Our Trips Layout */
+        #ourtrips{
+          padding-top: 55px;
+          padding-bottom: 55px;
+        }
+        .trips-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .filter-sidebar {
+            flex: 0 0 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .trips-container {
+            flex: 1;
+        }
+        
+        /* Filter Styles */
+        .trips-filters {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+        
+        .trips-filters li {
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .trips-filters li:hover {
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .trips-filters li.filter-active {
+            background: var(--forest-green);
+            color: white;
+        }
+        
+        /* Trips Grid */
+        .trips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .trip-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .trip-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .trip-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .trip-item:hover .trip-img {
+            transform: scale(1.05);
+        }
+        
+        .trip-info {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.41);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: var(--transition);
+            opacity: 0;
+        }
+        
+        .trip-item:hover .trip-info {
+            bottom: 0;
+            opacity: 1;
+        }
+        
+        .trip-category {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .trip-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .trip-desc {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        .trip-date {
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trip-date i {
+            margin-right: 5px;
+        }
+        
+        /* Isotope Filtering */
+        .isotope-hidden {
+            display: none !important;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .trips-wrapper {
+                flex-direction: column;
+            }
+            
+            .filter-sidebar {
+                flex: 0 0 auto;
+                margin-bottom: 30px;
+            }
+            
+            .trips-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .trips-filters li {
+                margin-bottom: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .trips-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }

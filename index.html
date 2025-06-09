@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -26,8 +27,8 @@
           <li class="nav-item"><a class="nav-link" href="#carouselHero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Why Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Our trips</a></li>
-          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ourtrips">Our trips</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li> -->
         </ul>
       </div>
     </div>
@@ -250,7 +251,7 @@
     <!-- /Services Section -->
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="py-5">
+  <!-- <section id="portfolio" class="py-5">
     <div class="container section-title">
       <h2>Our trips</h2>
       <p>Where do we travel</p>
@@ -263,7 +264,159 @@
         <div class="col-lg-4 col-md-6 portfolio-item"><img src="img/portfolio4.jpg" class="img-fluid" alt=""></div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <section id="ourtrips" class="trips-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Trips</h2>
+            <p>Explore our adventures.</p>
+        </div>
+        
+        <div class="trips-wrapper">
+            <div class="filter-sidebar">
+                <ul class="trips-filters">
+                    <li class="filter-active" data-filter="*">All Trips</li>
+                    <li data-filter=".filter-motorbike">Motorbike Adventures</li>
+                    <li data-filter=".filter-hiking">Hiking Adventures</li>
+                    <li data-filter=".filter-roadtrips">Family &amp; Friends Road Trips</li>
+                    <li data-filter=".filter-streetfoodtours">Street Food Tours</li>
+                    <li data-filter=".filter-seasonalfruittours">Seasonal Fruit Tours</li>
+                    <li data-filter=".filter-daytriptours">Day Trip Tours</li>
+                </ul>
+            </div>
+            
+            <div class="trips-container">
+                <div class="trips-grid">
+                    <!-- Day Trip Tour -->
+                    <div class="trip-item isotope-item filter-daytriptours">
+                        <a href="assets/img/IMG_2619.jpg" data-lightbox="trips" data-title="Trip 1 - Discovering the Sunset from sea-side">
+                            <img src="assets/img/IMG_2619.jpg" alt="Trip 1 - Discovering the Sunset from sea-side" class="trip-img">
+                        </a>
+                        <div class="trip-info">
+                            <span class="trip-category">Day Trip Tours</span>
+                            <h3 class="trip-title">Trip 1</h3>
+                            <p class="trip-desc">Discovering the Sunset from sea-side.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Motorbike Adventures -->
+                    <div class="trip-item isotope-item filter-motorbike">
+                        <a href="assets/img/IMG_7737.JPG" data-lightbox="trips" data-title="Trip 1 - Motorbike Adventures">
+                            <img src="assets/img/IMG_7737.JPG" alt="Trip 1 - Motorbike Adventures" class="trip-img">
+                        
+                        <div class="trip-info">
+                            <span class="trip-category">Motorbike Adventures</span>
+                            <h3 class="trip-title">Trip 1</h3>
+                            <p class="trip-desc">Motorbike Adventures.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <!-- Street Food Tours 1 -->
+                    <div class="trip-item isotope-item filter-streetfoodtours">
+                        <a href="assets/img/IMG_7110.JPG" data-lightbox="trips" data-title="Trip 1 - Street Food Tours">
+                            <img src="assets/img/IMG_7110.JPG" alt="Trip 1 - Street Food Tours" class="trip-img">
+                       
+                        <div class="trip-info">
+                            <span class="trip-category">Street Food Tours 1</span>
+                            <h3 class="trip-title">Trip 1</h3>
+                            <p class="trip-desc">Street Food Tours.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                         </a>
+                    </div>
+
+                    <!-- Street Food Tours 2 -->
+                    <div class="trip-item isotope-item filter-streetfoodtours">
+                        <a href="assets/img/IMG_2391.JPG" data-lightbox="trips" data-title="Trip 2 - Street Food Tours" target="_blank">
+                            <img src="assets/img/IMG_2391.JPG" alt="Trip 2 - Street Food Tours" class="trip-img">
+                        
+                        <div class="trip-info">
+                            <span class="trip-category">Street Food Tours 2</span>
+                            <h3 class="trip-title">Trip 2</h3>
+                            <p class="trip-desc">Street Food Tours.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <!-- Street Food Tours 3 -->
+                    <div class="trip-item isotope-item filter-streetfoodtours">
+                        <a href="assets/img/b5b96915-f4bc-4687-b22e-bb030a05e028.jpg" data-lightbox="trips" data-title="Trip 3 - Street Food Tours" target="_blank">
+                            <img src="assets/img/b5b96915-f4bc-4687-b22e-bb030a05e028.jpg" alt="Trip 3 - Street Food Tours" class="trip-img">
+                        
+                        <div class="trip-info">
+                            <span class="trip-category">Street Food Tours 3</span>
+                            <h3 class="trip-title">Trip 3</h3>
+                            <p class="trip-desc">Street Food Tours.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="trip-item isotope-item filter-roadtrips">
+                        <a href="assets/img/FullSizeRender.jpg" data-lightbox="trips" data-title="Trip 3 - Family & Friends Road Trips" target="_blank">
+                            <img src="assets/img/FullSizeRender.jpg" alt="Trip 5 - Street Food Tours" class="trip-img">
+                        
+                        <div class="trip-info">
+                            <span class="trip-category">Family &amp; Friends Road Trips</span>
+                            <h3 class="trip-title">Family &amp; Friends Road Trips 3</h3>
+                            <p class="trip-desc">Family &amp; Friends Road Trips.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="trip-item isotope-item filter-hiking">
+                        <a href="assets/img/IMG-20250526-WA0005.jpg" data-lightbox="trips" data-title="Trip 6 - Hiking Adventures" target="_blank">
+                            <img src="assets/img/IMG-20250526-WA0005.jpg" alt="Trip 6 - Hiking Adventures" class="trip-img">
+                        
+                        <div class="trip-info">
+                            <span class="trip-category">Hiking Adventures</span>
+                            <h3 class="trip-title">Hiking Adventures</h3>
+                            <p class="trip-desc">Hiking Adventures.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="trip-item isotope-item filter-roadtrips">
+                        <a href="assets/img/IMG_7743.JPG" data-lightbox="trips" data-title="Trip 8 - Family & Friends Road Trips" target="_blank">
+                            <img src="assets/img/IMG_7743.JPG" alt="Trip 8 - Family & Friends Road Trips" class="trip-img">
+                        
+                        <div class="trip-info">
+                            <span class="trip-category">Family &amp; Friends Road Trips</span>
+                            <h3 class="trip-title">Family &amp; Friends Road Trips 8</h3>
+                            <p class="trip-desc">Family &amp; Friends Road Trips.</p>
+                            <div class="trip-date">
+                                <i class="fas fa-calendar-alt"></i> May 15-22, 2023
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
   <!-- Footer -->
   <footer id="footer" class="text-center">
@@ -272,5 +425,33 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+   <script>
+        // Simple filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filters = document.querySelectorAll('.trips-filters li');
+            const items = document.querySelectorAll('.trip-item');
+            
+            filters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    // Update active filter
+                    document.querySelector('.trips-filters .filter-active').classList.remove('filter-active');
+                    this.classList.add('filter-active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter items
+                    items.forEach(item => {
+                        if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
+                            item.classList.remove('isotope-hidden');
+                        } else {
+                            item.classList.add('isotope-hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
