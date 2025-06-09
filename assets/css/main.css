@@ -62,7 +62,9 @@
 
 .overlay-box {
   
-  background-color: #00537760;
+  background: linear-gradient(180deg, var(--forest-green), #4d7a4d00);
+  background-blend-mode: overlay; /* Or 'screen' for a lighter effect */
+
   padding: 20px 30px;
   border-radius: 10px;
   display: inline-block;
