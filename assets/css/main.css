@@ -114,6 +114,7 @@
 }
 .services h3{
   color: var(--deep-ocean-blue);
+  padding-bottom: 20px;
 }
 .section_whychooseusTitle{
   color: var(--forest-green);
@@ -124,6 +125,10 @@
   border-top: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
   border-left: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
   position: relative;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .services .content .service-item .number {
@@ -140,31 +145,11 @@
   color: var(--accent-color);
 }
 
-.services .content .service-item .service-item-icon img {
-  width: 50px;
-}
-
-.services .content .service-item .service-item-icon:before {
-  position: absolute;
-  content: "";
-  transform: rotate(45deg);
-  z-index: -1;
-  left: -20px;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-right: 40px solid var(--accent-color);
-  display: none;
-}
-
-.services .content .service-item .service-item-icon>span {
-  color: var(--deep-ocean-blue);
-  font-size: 4rem;
-}
-
 .services .content .service-item .service-item-content .service-heading {
   font-size: 20px;
   color: var(--deep-ocean-blue);
   font-weight: 400;
+  text-align: center;
 }
 
 .services .content .service-item .service-item-content p {
