@@ -1,0 +1,209 @@
+    :root {
+      --forest-green: #345b34;
+      --deep-ocean-blue: #005477 ;
+      --golden-sunset: #FFA500;
+    }
+    body {
+      font-family: "Montserrat", sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    h2{
+        color: var(--forest-green) !important;
+    }
+    .section{
+        padding: 60px 0;
+    }
+    .bg-light{
+      background-color: #0053770e !important;
+    }
+    .navbar {
+    background-image: linear-gradient(180deg, var(--forest-green), #4d7a4d);
+    }
+
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+    .navbar-brand:hover, .nav-link:hover {
+      color: var(--golden-sunset) !important;
+    }
+    .btn-primary {
+      background-color: var(--forest-green);
+      border-color: var(--forest-green);
+    }
+    .btn-primary:hover {
+      background-color: var(--deep-ocean-blue);
+      border-color: var(--deep-ocean-blue);
+    }
+    footer {
+        background-image: linear-gradient(180deg, var(--forest-green), #4d7a4d);
+      color: #fff;
+      padding: 1rem;
+    }
+.carousel-item {
+  height: 950px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  top: 60%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.overlay-box {
+  
+  background-color: #00537760;
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.about .content .who-we-are {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: color-mix(in srgb, var(--forest-green), transparent 40%);
+}
+
+.about .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--deep-ocean-blue);
+}
+
+.about p{
+    color: var();
+    font-size: 20px;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 1.25rem;
+  margin-right: 4px;
+  color: var(--accent-color);
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.about .about-images img {
+  border-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .section-title h2 {
+  color: var(--accent-color);
+  font-size: 20px;
+}
+.services h3{
+  color: var(--deep-ocean-blue);
+}
+.section_whychooseusTitle{
+  color: var(--forest-green);
+}
+.services .content .service-item {
+  background-color: var(--surface-color);
+  padding: 20px 30px;
+  border-top: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
+  border-left: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
+  position: relative;
+}
+
+.services .content .service-item .number {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--deep-ocean-blue), transparent 80%);
+}
+
+.services .content .service-item .service-item-icon {
+  position: relative;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.services .content .service-item .service-item-icon img {
+  width: 50px;
+}
+
+.services .content .service-item .service-item-icon:before {
+  position: absolute;
+  content: "";
+  transform: rotate(45deg);
+  z-index: -1;
+  left: -20px;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right: 40px solid var(--accent-color);
+  display: none;
+}
+
+.services .content .service-item .service-item-icon>span {
+  color: var(--deep-ocean-blue);
+  font-size: 4rem;
+}
+
+.services .content .service-item .service-item-content .service-heading {
+  font-size: 20px;
+  color: var(--deep-ocean-blue);
+  font-weight: 400;
+}
+
+.services .content .service-item .service-item-content p {
+  font-size: 15px;
+}
+
+@media (min-width: 769px) {
+  .services .content [class^=col-]:nth-child(4n+4) .service-item {
+    border-right: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
+  }
+
+  .services .content [class^=col-]:nth-last-child(-n+4) .service-item {
+    border-bottom: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
+  }
+}
+
+@media (max-width: 768px) {
+  .services .content [class^=col-]:nth-child(2n+2) .service-item {
+    border-right: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
+  }
+
+  .services .content [class^=col-]:last-child .service-item,
+  .services .content [class^=col-]:nth-last-child(2) .service-item {
+    border-bottom: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
+  }
+}
+
+@media (max-width: 576px) {
+  .services .content [class^=col-] .service-item {
+    border: 1px solid color-mix(in srgb, var(--deep-ocean-blue), transparent 90%);
+    margin-bottom: 10px;
+  }
+}
+
+.service-item i {
+  font-size: 80px;
+  color: var(--deep-ocean-blue);
+}
+
+.service-item svg{
+  color: var(--deep-ocean-blue);
+}
