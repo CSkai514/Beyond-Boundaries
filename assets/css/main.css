@@ -152,6 +152,7 @@
 .service-item  img{
   max-width: 100px;
   max-height: 100px;
+  margin-bottom: 15px;
 }
 .services .content .service-item .service-item-content .service-heading {
   font-size: 20px;
