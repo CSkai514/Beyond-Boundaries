@@ -23,6 +23,10 @@
     background-image: linear-gradient(180deg, var(--forest-green), #4d7a4d);
     }
 
+    .navbar-brand img{
+      max-width: 150px;
+      max-height: 150px;
+    }
     .navbar-brand, .nav-link {
       color: white !important;
     }
