@@ -444,3 +444,108 @@
   color: #345b34;
   margin-right: 5px;
 }
+
+.our_trip_section_wrapper {
+  margin: 5vh 0;
+}
+
+/* Card styling */
+.our_trip_section_card {
+  border: none;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 460px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  position: relative;
+  padding: 1.5rem;
+   background: linear-gradient(to top, rgba(255, 186, 33, 0.3), rgba(255, 255, 255, 1));
+}
+
+.our_trip_section_card-has-bg:hover {
+  transform: scale(0.98);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.our_trip_section_card-img-overlay {
+  position: relative;
+ 
+  height: 100%;
+  padding: 1rem;
+  transition: all 0.4s ease;
+}
+
+.our_trip_section_card-body {
+  transition: all 0.4s ease;
+}
+
+.our_trip_section_card:hover .our_trip_section_card-body {
+  margin-top: 10px;
+}
+
+.our_trip_section_card-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  color: #00739e;
+
+}
+
+/* Scoped Tabs Styling */
+.our_trip_section_wrapper .nav-pills .nav-link {
+  background-color: #005477; 
+  color: #fff;
+  border-radius: 30px;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+}
+
+/* Hover effect for all */
+.our_trip_section_wrapper .nav-pills .nav-link:hover {
+  background-color: #00739e;
+  color: #fff;
+}
+
+/* Active tab: orange with dark text */
+.our_trip_section_wrapper .nav-pills .nav-link.active {
+  background-color: #FFA500;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Add background color for the entire nav tab container (optional) */
+.our_trip_section_wrapper .nav-tabs-container {
+  padding: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .our_trip_section_card {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .our_trip_section_card {
+    min-height: 360px;
+  }
+}
+
+ .btn-warning {
+  background-color: #345b34 !important;
+  border-color: #345b34 !important;
+  color: #fff !important;
+}
+.btn-warning:hover {
+  background-color: #005477 !important;
+  border-color: #026691 !important;
+  color: #fff !important;
+}
+
+.our_trip_section_card-body hr {
+  border: 1px dashed #4d7a4d;
+}
