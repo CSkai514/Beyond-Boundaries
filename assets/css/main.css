@@ -13,6 +13,9 @@
     h2{
         color: var(--forest-green) !important;
     }
+    p{
+      font-weight: 500;
+    }
     .section{
         padding: 60px 0;
     }
@@ -456,11 +459,12 @@
   overflow: hidden;
   border-radius: 20px;
   min-height: 460px;
+  max-height: 650px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
   background-color: #fff;
   position: relative;
   padding: 1.5rem;
-   background: linear-gradient(to top, rgba(255, 186, 33, 0.3), rgba(255, 255, 255, 1));
+   background: linear-gradient(to top, rgba(255, 186, 33, 0.3), rgba(246, 246, 246, 0.773));
 }
 
 .our_trip_section_card-has-bg:hover {
@@ -549,3 +553,15 @@
 .our_trip_section_card-body hr {
   border: 1px dashed #4d7a4d;
 }
+
+.our_trip_section_card-body li {
+  font-size: 18px;
+  font-weight: 550;
+  color: #345b34;
+}
+.our_trip_section_card-body p{
+  color: #345b34;
+  font-size: 20px;
+  font-weight: 600;
+}
+
