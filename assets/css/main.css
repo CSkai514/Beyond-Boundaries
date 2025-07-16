@@ -580,20 +580,19 @@
 }
 
 .book-whatsapp-modal-pop-out .input {
-  background-color: #f5f5f5;
   border-radius: 12px;
   border: 1px solid #ccc;
   box-sizing: border-box;
   font-size: 16px;
   height: 100%;
   outline: 0;
-  padding: 8px 20px 0;
+  padding: 0px 20px;
   width: 100%;
   color: #005477;
 }
 
 .book-whatsapp-modal-pop-out .cut {
-  background-color: #ffffffd8;
+  background-color: #ffffff;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -657,10 +656,6 @@
   transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.input:not(:placeholder-shown) ~ .input-label {
-  color: #808097;
-}
-
 .input:focus ~ .input-label {
   color: #345b34;
   font-weight: 700;
@@ -668,3 +663,39 @@
 .swal2-confirm{
   background-color: #345b34;
 }
+
+    .custom-select-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .custom-select-wrapper select {
+      width: 100%;
+      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: none;
+      transition: border-color 0.2s ease-in-out;
+    }
+
+    .input:focus, .custom-select-wrapper select:focus {
+      outline: none;
+      border-color: #4CAF50; /* green */
+    }
+
+    .custom-arrow {
+      position: absolute;
+      pointer-events: none;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #333;
+    }
