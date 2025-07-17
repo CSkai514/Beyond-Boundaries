@@ -133,5 +133,16 @@ const translation_dict_cn = {
   "filter_roadtrips": "家庭朋友公路旅行",
   "filter_streetfood": "街头美食之旅",
   "filter_fruit": "季节性水果之旅",
-  "filter_daytrip": "一日游行程"
+  "filter_daytrip": "一日游行程",
+  "booking-title": "预订信息",
+  "booking-name": "姓名（例如：李先生/女士）",
+  "booking-pax": "人数",
+  "booking-age": "年龄段（例如：20–40）",
+  "booking-date": "出发日期",
+  "booking-transport": "交通工具",
+  "booking-motorbike": "摩托车",
+  "booking-car": "汽车",
+  "booking-select-transport": "选择交通工具",
+  "booking-btn-confirm": "通过 WhatsApp 预订",
+  "booking-btn-cancel": "取消"  
 }

@@ -1020,43 +1020,45 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 function openBookingForm(routeName) {
+  const t = i18next.t; // shorthand for translation function
+
   Swal.fire({
-    title: 'Booking Info',
+    title: t('booking-title'),
     html:
       '<div class="book-whatsapp-modal-pop-out">' +
         '<div class="input-container ic1">' +
           '<input id="swal-input-name" class="input" type="text" placeholder=" " />' +
           '<div class="cut"></div>' +
-          '<label for="swal-input-name" class="input-label">Name (e.g. Mr/Ms Lee)</label>' +
+          `<label for="swal-input-name" class="input-label">${t('booking-name')}</label>` +
         '</div>' +
 
         '<div class="input-container ic2">' +
           '<input id="swal-input-pax" class="input" type="number" placeholder=" " />' +
           '<div class="cut"></div>' +
-          '<label for="swal-input-pax" class="input-label">Number of People</label>' +
+          `<label for="swal-input-pax" class="input-label">${t('booking-pax')}</label>` +
         '</div>' +
 
         '<div class="input-container ic2">' +
           '<input id="swal-input-age" class="input" type="text" placeholder=" " />' +
           '<div class="cut"></div>' +
-          '<label for="swal-input-age" class="input-label">Age Group (e.g. 20–40)</label>' +
+          `<label for="swal-input-age" class="input-label">${t('booking-age')}</label>` +
         '</div>' +
 
         '<div class="input-container ic2">' +
           '<input id="swal-input-date" class="input" type="date" placeholder=" " />' +
           '<div class="cut"></div>' +
-          '<label for="swal-input-date" class="input-label">Travel Date</label>' +
+          `<label for="swal-input-date" class="input-label">${t('booking-date')}</label>` +
         '</div>' +
 
         '<div class="input-container ic2 custom-select-wrapper">' +
           '<select id="swal-input-transport" class="input">' +
-            '<option value="" disabled selected></option>' +
-            '<option value="Motorbike">Motorbike</option>' +
-            '<option value="Car">Car</option>' +
+            `<option value="" disabled selected>${t('booking-select-transport')}</option>` +
+            `<option value="Motorbike">${t('booking-motorbike')}</option>` +
+            `<option value="Car">${t('booking-car')}</option>` +
           '</select>' +
           '<span class="custom-arrow"></span>' +
           '<div class="cut"></div>' +
-          '<label for="swal-input-transport" class="input-label">Transport</label>' +
+          `<label for="swal-input-transport" class="input-label">${t('booking-transport')}</label>` +
         '</div>' +
       '</div>',
       showCancelButton: true,

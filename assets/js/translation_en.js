@@ -140,5 +140,16 @@ const translation_dict_en = {
   "filter_roadtrips": "Family & Friends Road Trips",
   "filter_streetfood": "Street Food Tours",
   "filter_fruit": "Seasonal Fruit Tours",
-  "filter_daytrip": "Day Trip Tours"
+  "filter_daytrip": "Day Trip Tours",
+  "booking-title": "Booking Info",
+  "booking-name": "Name (e.g. Mr/Ms Lee)",
+  "booking-pax": "Number of People",
+  "booking-age": "Age Group (e.g. 20–40)",
+  "booking-date": "Travel Date",
+  "booking-transport": "Transport",
+  "booking-motorbike": "Motorbike",
+  "booking-car": "Car",
+  "booking-select-transport": "Select transport",
+  "booking-btn-confirm": "Book on WhatsApp",
+  "booking-btn-cancel": "Cancel"
 }
