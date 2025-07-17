@@ -5,7 +5,7 @@ const translation_dict_cn = {
     "About Us":"关于我们",
     "Why Us":"为什么选我们",
     "Our trips":"我们的行程",
-    "paragraph1":"欢迎来到 Beyond Boundaries，这是您探索马来西亚及更远地方隐藏美景的起点。我们位于充满活力的槟城岛，专注于为探险者、家庭和美食爱好者量身定制私人旅行体验。",
+    "paragraph1":"欢迎来到 Beyond Boundaries Transport Services，这是您探索马来西亚及更远地方隐藏美景的起点。我们位于充满活力的槟城岛，专注于为探险者、家庭和美食爱好者量身定制私人旅行体验。",
     "who_we_are_title": "关于我们",
     "who_we_are_desc": "我们是一群来自槟城的热情本地人，致力于提供富有意义、个性化的旅行体验，超越常规旅游景点。我们的 <strong>Beyond Boundaries</strong> 私人导览，专为那些渴望真正了解槟城文化、美食与隐藏宝藏的旅人而设计。",    
     "card1_title": "💡 适合谁？",

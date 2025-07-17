@@ -5,7 +5,7 @@ const translation_dict_en = {
     "About Us":"About Us",
     "Why Us":"Why Choose Us",
     "Our trips":"Our trips",
-    "paragraph1":"Welcome to Beyond Boundaries, your gateway to discovering the hidden gems of Malaysia and beyond. Located on the vibrant island of Penang, we specialize in private, tailor-made travel experiences designed for adventurers, families, and food lovers alike.",
+    "paragraph1":"Welcome to Beyond Boundaries Transport Services, your gateway to discovering the hidden gems of Malaysia and beyond. Located on the vibrant island of Penang, we specialize in private, tailor-made travel experiences designed for adventurers, families, and food lovers alike.",
     "who_we_are_title": "Who We Are",
     "who_we_are_desc": "We are passionate locals from Penang offering meaningful, personalized travel experiences beyond the usual tourist spots. Our <strong>Beyond Boundaries</strong> private tours are crafted for those who wish to truly connect with Penang’s culture, flavors, and hidden gems.",
     "card1_title": "💡 Who Is This For?",
