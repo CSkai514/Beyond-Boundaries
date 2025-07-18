@@ -546,6 +546,7 @@
 @media (max-width: 480px) {
   .our_trip_section_card {
     min-height: 360px;
+    max-height: 100%;
   }
 }
 
@@ -809,4 +810,17 @@
     transform: translateY(0px) scale(1);
     opacity: 1;
   }
+}
+
+.swal2-confirm:hover{
+background-color: var(--deep-ocean-blue);
+      border-color: var(--deep-ocean-blue);
+}
+
+.nav-link.active:hover{
+  color: var(--deep-ocean-blue) !important;
+}
+
+.modal-dialog-scrollable .modal-content{
+  max-height: 90%;
 }
