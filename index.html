@@ -298,292 +298,125 @@
   </div>
 </section>
 
-<section id="our-trip-packages" class="our-trip-section_wrapper py-5">
+<section class="our_trip_section py-5">
   <div class="container">
-    <div class="row mb-4 text-center">
-      <div class="col-12">
-        <h2 class="font-weight-bold trans" translate-key="our_trip_title">Our Trip Packages</h2>
-        <p class="lead text-muted trans" translate-key="our_trip_desc">
-          Designed for the carefree traveler!<br>
-          No planning, no bookings, no stress — just pack your bags and go, we’ll handle the rest.
-        </p>
-      </div>
-    </div>
+    <div class="our_trip_section_card has-bg mx-auto">
+      <div class="our_trip_section_card_body">
+        <h3 class="our_trip_section_card_title mb-4">Plan Your Trip</h3>
 
-    <div class="our_trip_section_wrapper">
-      <div class="row justify-content-center mb-5">
-        <div class="col-auto">
-          <ul class="nav nav-pills justify-content-center" id="tripTab" role="tablist">
-            <li class="nav-item mb-3 mb-md-0">
-              <a class="nav-link active trans" id="long-trip-tab" data-bs-toggle="pill" href="#long-trip" role="tab" aria-controls="long-trip" aria-selected="true" translate-key="long_trip_tab">⛰️ Long Adventure Packages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link trans" id="recommended-tab" data-bs-toggle="pill" href="#recommended-trip" role="tab" aria-controls="recommended-trip" aria-selected="false" translate-key="recommended_tab">⭐ Recommended Picks</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <form id="tripForm" class="our_trip_package_form">
 
-      <div class="tab-content" id="tripTabContent">
-        <!-- Route 1 -->
-        <div class="tab-pane fade show active" id="long-trip" role="tabpanel" aria-labelledby="long-trip-tab">
+          <!-- Request Person Name -->
+          <div class="our_trip_package_field">
+            <label for="requestName">Request Person Name</label>
+            <input type="text" id="requestName" name="requestName" class="form-control" required>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="our_trip_package_field">
+            <label for="requestPhone">Phone Number</label>
+            <input type="tel" id="requestPhone" name="requestPhone" class="form-control" required>
+          </div>
+
+          <!-- Trip Type (Local/International) -->
+          <div class="our_trip_package_field">
+            <label for="tripType">Trip in (Local/International)</label>
+            <select id="tripType" name="tripType" class="form-select" onchange="toggleCountrySelect()">
+              <option value="">Select Type</option>
+              <option value="Local">Local</option>
+              <option value="International">International</option>
+            </select>
+          </div>
+
+          <!-- Country (only for International) -->
+          <div class="our_trip_package_field d-none" id="countryWrapper">
+            <label for="tripCountry">Country</label>
+            <select id="tripCountry" name="tripCountry" class="form-select">
+              <option value="">Select Country</option>
+              <option value="Thailand">Thailand</option>
+              <!-- Add more countries here -->
+            </select>
+          </div>
+
+          <!-- Activity Preferences -->
+          <div class="our_trip_package_field">
+            <label>Activity Preferences</label>
+            <div class="our_trip_package_dropdown">
+              <button type="button" class="our_trip_package_dropdown_btn">Select Activities</button>
+              <div class="our_trip_package_dropdown_content">
+                <label><input type="checkbox" value="Hiking"> Hiking</label>
+                <label><input type="checkbox" value="Swimming"> Swimming</label>
+                <label><input type="checkbox" value="Sightseeing"> Sightseeing</label>
+                <label><input type="checkbox" value="Shopping"> Shopping</label>
+                <label><input type="checkbox" value="Photography"> Photography</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location Type -->
+          <div class="our_trip_package_field">
+            <label>Location Type</label>
+            <div class="our_trip_package_radio">
+              <label><input type="radio" name="location" value="Indoor"> Indoor</label>
+              <label><input type="radio" name="location" value="Outdoor"> Outdoor</label>
+            </div>
+          </div>
+
+          <!-- Food Preferences -->
+          <div class="our_trip_package_field">
+            <label>Food Preferences</label>
+            <div class="our_trip_package_dropdown">
+              <button type="button" class="our_trip_package_dropdown_btn">Select Food</button>
+              <div class="our_trip_package_dropdown_content">
+                <label><input type="checkbox" value="Street Food"> Street Food</label>
+                <label><input type="checkbox" value="Fine Dining"> Fine Dining</label>
+                <label><input type="checkbox" value="Vegetarian"> Vegetarian</label>
+                <label><input type="checkbox" value="Halal"> Halal</label>
+                <label><input type="checkbox" value="Local Cuisine"> Local Cuisine</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Travel Style -->
+          <div class="our_trip_package_field">
+            <label>Travel Style</label>
+            <div class="our_trip_package_radio">
+              <label><input type="radio" name="style" value="Budget"> Budget</label>
+              <label><input type="radio" name="style" value="Mid-Range"> Mid-Range</label>
+              <label><input type="radio" name="style" value="Luxury"> Luxury</label>
+            </div>
+          </div>
+
+          <!-- Dates -->
           <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="our_trip_section_card our_trip_section_card-has-bg">
-                <div class="our_trip_section_card-img-overlay">
-                  <div class="our_trip_section_card-body">
-                    <h5 class="our_trip_section_card-title trans" translate-key="route1_title">Route 1: Northern Slow Travel</h5>
-                    <hr>
-                    <p class="trans" translate-key="route1_route">📍 Penang → Taiping → Sitiawan → Lumut → Kuala Kurau → Bukit Merah → Penang</p>
-                    <hr>
-                    <ul>
-                      <li class="trans" translate-key="route1_point1">🌿 Taiping Lake cycling and rainforest trail</li>
-                      <li class="trans" translate-key="route1_point2">🐟 Explore Sitiawan's fishing village culture</li>
-                      <li class="trans" translate-key="route1_point3">🌅 Scenic Lumut coastal drive and sunset</li>
-                      <li class="trans" translate-key="route1_point4">✨ Kuala Kurau fireflies & riverside chalet</li>
-                      <li class="trans" translate-key="route1_point5">🏞 Hike Bukit Merah for panoramic views</li>
-                    </ul>
-                    <p class="trans" translate-key="route1_duration">🕒 Suggested: 3D2N or 4D3N</p>
-                    <div class="text-center mt-3">
-                      <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Route 1')">Select This Trip</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-md-6 our_trip_package_field">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" name="startDate" class="form-control">
             </div>
-
-            <!-- Route 2 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="our_trip_section_card our_trip_section_card-has-bg">
-                <div class="our_trip_section_card-img-overlay">
-                  <div class="our_trip_section_card-body">
-                    <h5 class="our_trip_section_card-title trans" translate-key="route2_title">Route 2: Highland Healing Route</h5>
-                    <hr>
-                    <p class="trans" translate-key="route2_route">📍 Penang → Ipoh → Cameron Highlands → Bentong → Genting/Karak → Return</p>
-                    <hr>
-                    <ul>
-                      <li class="trans" translate-key="route2_point1">🍜 Ipoh food tour: bean sprout chicken, mural street, coffee spots</li>
-                      <li class="trans" translate-key="route2_point2">🚴‍♀️ Bike through tea plantations and strawberry farms</li>
-                      <li class="trans" translate-key="route2_point3">🍓 Cameron cool breeze and local market strolls</li>
-                      <li class="trans" translate-key="route2_point4">🛍️ Shop Bentong’s weekend street market</li>
-                      <li class="trans" translate-key="route2_point5">🎲 Optional stop at Genting Highlands for entertainment</li>
-                    </ul>
-                    <p class="trans" translate-key="route2_duration">🕒 Suggested: 3D2N or 4D3N</p>
-                    <div class="text-center mt-3">
-                      <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Route 2')">Select This Trip</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Route 3 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="our_trip_section_card our_trip_section_card-has-bg">
-                <div class="our_trip_section_card-img-overlay">
-                  <div class="our_trip_section_card-body">
-                    <h5 class="our_trip_section_card-title trans" translate-key="route3_title">Route 3: Southbound Cultural Circuit</h5>
-                    <hr>
-                    <p class="trans" translate-key="route3_route">📍 Penang → Melaka → Seremban → Port Dickson → Return</p>
-                    <hr>
-                    <ul>
-                      <li class="trans" translate-key="route3_point1">🏛️ Explore Melaka’s heritage zones and Jonker Street</li>
-                      <li class="trans" translate-key="route3_point2">🛶 River cruise through historical town</li>
-                      <li class="trans" translate-key="route3_point3">🍽️ Local eats: chicken rice balls, cendol, nyonya dishes</li>
-                      <li class="trans" translate-key="route3_point4">🌊 Relax on Port Dickson beaches or water activities</li>
-                      <li class="trans" translate-key="route3_point5">🧘‍♀️ Seremban hot springs and kampung stay</li>
-                    </ul>
-                    <p class="trans" translate-key="route3_duration">🕒 Suggested: 4D3N or 5D4N</p>
-                    <div class="text-center mt-3">
-                      <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Route 3')">Select This Trip</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Route 4 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="our_trip_section_card our_trip_section_card-has-bg">
-                <div class="our_trip_section_card-img-overlay">
-                  <div class="our_trip_section_card-body">
-                    <h5 class="our_trip_section_card-title trans" translate-key="route4_title">Route 4: Cultural Heritage Foodie Line</h5>
-                    <hr>
-                    <p class="trans" translate-key="route4_route">📍 Penang → Ipoh → Seremban → Melaka → Negeri Sembilan Beach → Back</p>
-                    <hr>
-                    <ul>
-                      <li class="trans" translate-key="route4_point1">🥘 Explore Chinese, Malay & Peranakan flavors</li>
-                      <li class="trans" translate-key="route4_point2">🍜 Food: Seremban Siew Bao, Ipoh Chicken Rice, Nyonya dishes</li>
-                      <li class="trans" translate-key="route4_point3">🎡 Jonker Street & old town photography</li>
-                      <li class="trans" translate-key="route4_point4">🏝 End at a hidden beach in Negeri Sembilan</li>
-                    </ul>
-                    <p class="trans" translate-key="route4_duration">🕒 Suggested: 4D3N or 5D4N</p>
-                    <div class="text-center mt-3">
-                      <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Route 4')">Select This Trip</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Route 5 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="our_trip_section_card our_trip_section_card-has-bg">
-                <div class="our_trip_section_card-img-overlay">
-                  <div class="our_trip_section_card-body">
-                    <h5 class="our_trip_section_card-title trans" translate-key="route5_title">Route 5: Border Explorer Adventure</h5>
-                    <hr>
-                    <p class="trans" translate-key="route5_route">📍 Penang → Alor Setar → Baling → Betong/Hatyai → Back</p>
-                    <hr>
-                    <ul>
-                      <li class="trans" translate-key="route5_point1">🌾 Ride through rural northern Malaysia</li>
-                      <li class="trans" translate-key="route5_point2">🏞 Betong: Thai mountain town & tunnel caves</li>
-                      <li class="trans" translate-key="route5_point3">🌤 Hatyai: Night market, massage, temple hopping</li>
-                      <li class="trans" translate-key="route5_point4">🛍 Shopping & cross-border adventure</li>
-                      <li class="trans" translate-key="route5_point5">🌐 Fun & safe for first-time explorers</li>
-                    </ul>
-                    <p class="trans" translate-key="route5_duration">🕒 Suggested: 4D3N or 5D4N</p>
-                    <div class="text-center mt-3">
-                      <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Route 5')">Select This Trip</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div> 
-        </div> 
-        <!-- Recommended Packages Tab -->
-        <div class="tab-pane fade" id="recommended-trip" role="tabpanel" aria-labelledby="recommended-tab">
-  <div class="row">
-
-    <!-- Half Day Trip -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="our_trip_section_card-2 our_trip_section_card-has-bg">
-        <div class="our_trip_section_card-img-overlay">
-          <div class="our_trip_section_card-body">
-            <h4 class="our_trip_section_card-title trans" translate-key="pkg_halfday_title">✅ Penang Half Day Trip</h4>
-            <ul class="list-unstyled">
-              <li class="trans" translate-key="pkg_halfday_point1">📍 George Town: temples, street art, local eats</li>
-              <li class="trans" translate-key="pkg_halfday_point2">⏰ Choose morning, afternoon, or evening</li>
-              <li class="trans" translate-key="pkg_halfday_point3">💡 Perfect for short-stay travelers</li>
-            </ul>
-            <hr>
-            <div class="text-center mt-3">
-              <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Penang Half Day Trip')">Select This Trip</button>
+            <div class="col-md-6 our_trip_package_field">
+              <label for="endDate">End Date</label>
+              <input type="date" id="endDate" name="endDate" class="form-control">
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Full Day Trip -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="our_trip_section_card-2 our_trip_section_card-has-bg">
-        <div class="our_trip_section_card-img-overlay">
-          <div class="our_trip_section_card-body">
-            <h4 class="our_trip_section_card-title trans" translate-key="pkg_fullday_title">✅ Penang Full Day Trip</h4>
-            <ul class="list-unstyled">
-              <li class="trans" translate-key="pkg_fullday_point1">📍 Street art, temple culture, Nyonya food, durian farm (seasonal)</li>
-              <li class="trans" translate-key="pkg_fullday_point2">🏍 Motorbike or 🚗 car available</li>
-              <li class="trans" translate-key="pkg_fullday_point3">📸 Full day of exploring and snapping photos, no rush</li>
-            </ul>
-            <hr>
-            <div class="text-center mt-3">
-              <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Penang Full Day Trip')">Select This Trip</button>
-            </div>
+          <!-- Group Size -->
+          <div class="our_trip_package_field">
+            <label for="groupSize">Group Size</label>
+            <input type="number" id="groupSize" name="groupSize" min="1" max="20" class="form-control">
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Penang 3D2N -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="our_trip_section_card-2 our_trip_section_card-has-bg">
-        <div class="our_trip_section_card-img-overlay">
-          <div class="our_trip_section_card-body">
-            <h4 class="our_trip_section_card-title trans" translate-key="pkg_penang3d2n_title">✅ Penang 3D2N Escape</h4>
-            <ul class="list-unstyled">
-              <li class="trans" translate-key="pkg_penang3d2n_point1">🏡 Culture, night markets, sea views, motorbike/camping options</li>
-              <li class="trans" translate-key="pkg_penang3d2n_point2">🌅 Great for deep exploration, relaxed or photo-themed routes</li>
-              <li class="trans" translate-key="pkg_penang3d2n_point3">✔ Private: 2 pax min, flexible itinerary</li>
-            </ul>
-            <hr>
-            <div class="text-center mt-3">
-              <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Penang 3D2N Escape')">Select This Trip</button>
-            </div>
+          <!-- Submit -->
+          <div class="our_trip_package_field text-center">
+            <button type="button" onclick="submitTripForm()" class="our_trip_package_submit">Submit</button>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Thailand 3D2N -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="our_trip_section_card-2 our_trip_section_card-has-bg">
-        <div class="our_trip_section_card-img-overlay">
-          <div class="our_trip_section_card-body">
-            <h4 class="our_trip_section_card-title trans" translate-key="pkg_thai3d2n_title">🎯 Thailand 3D2N Mini Getaway</h4>
-            <ul class="list-unstyled">
-              <li class="trans" translate-key="pkg_thai3d2n_point1">🚗 Hatyai or Betong, motorbike/car</li>
-              <li class="trans" translate-key="pkg_thai3d2n_point2">📍 Food, night markets, culture, Thai vibes</li>
-              <li class="trans" translate-key="pkg_thai3d2n_point3">🧭 Travel with locals — no planning needed</li>
-            </ul>
-            <hr>
-            <div class="text-center mt-3">
-              <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Thailand 3D2N Getaway')">Select This Trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 10–14 Days West Malaysia -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="our_trip_section_card-2 our_trip_section_card-has-bg">
-        <div class="our_trip_section_card-img-overlay">
-          <div class="our_trip_section_card-body">
-            <h4 class="our_trip_section_card-title trans" translate-key="pkg_westmsia14d_title">✅ 10–14 Days Around West Malaysia</h4>
-            <ul class="list-unstyled">
-              <li class="trans" translate-key="pkg_westmsia14d_point1">🛣 Loop across 13 states from Penang (no repeated routes)</li>
-              <li class="trans" translate-key="pkg_westmsia14d_point2">🏍 Motorbike or 🚗 car – 2 pax min</li>
-              <li class="trans" translate-key="pkg_westmsia14d_point3">🌄 Rice fields, coast, towns, food, forest, camping – all in!</li>
-            </ul>
-            <hr>
-            <div class="text-center mt-3">
-              <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('West Malaysia 10–14 Days')">Select This Trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Thailand 14+ Days -->
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="our_trip_section_card-2 our_trip_section_card-has-bg">
-        <div class="our_trip_section_card-img-overlay">
-          <div class="our_trip_section_card-body">
-            <h4 class="our_trip_section_card-title trans" translate-key="pkg_thai14d_title">✅ 14+ Days Thailand South to North</h4>
-            <ul class="list-unstyled">
-              <li class="trans" translate-key="pkg_thai14d_point1">📍 Penang → Hatyai → Chumphon → Chiang Mai → Chiang Rai</li>
-              <li class="trans" translate-key="pkg_thai14d_point2">🌄 Markets, temples, nature, local towns</li>
-              <li class="trans" translate-key="pkg_thai14d_point3">✔ Full custom support for food, lodging, routes</li>
-            </ul>
-            <hr>
-            <div class="text-center mt-3">
-              <button class="btn btn-warning trans" translate-key="select_trip_btn" onclick="openBookingForm('Thailand 14+ Days Adventure')">Select This Trip</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
+        </form>
       </div>
     </div>
   </div>
 </section>
+
+
 
   <section id="ourtrips" class="trips-section">
     <div class="container">
@@ -1011,7 +844,7 @@
   });
 </script> -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
+<!-- <script>
 function openBookingForm(routeName) {
   const t = i18next.t; // shorthand for translation function
 
@@ -1093,9 +926,82 @@ function openBookingForm(routeName) {
   });
 }
 
+</script> -->
+<script>
+// Toggle dropdown
+document.querySelectorAll('.our_trip_package_dropdown_btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('active');
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  document.querySelectorAll('.our_trip_package_dropdown').forEach(drop => {
+    if (!drop.contains(event.target)) {
+      drop.classList.remove('active');
+    }
+  });
+});
+
+// Update button text with selected items
+document.querySelectorAll('.our_trip_package_dropdown').forEach(drop => {
+  const btn = drop.querySelector('.our_trip_package_dropdown_btn');
+  const checkboxes = drop.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const selected = Array.from(checkboxes).filter(c => c.checked).map(c => c.value);
+      btn.textContent = selected.length > 0 ? selected.join(", ") : btn.dataset.default || btn.textContent;
+    });
+  });
+  btn.dataset.default = btn.textContent;
+});
 </script>
 <script>
+function toggleCountrySelect() {
+  const type = document.getElementById("tripType").value;
+  const countryWrapper = document.getElementById("countryWrapper");
+  countryWrapper.classList.toggle("d-none", type !== "International");
+}
 
+function submitTripForm() {
+  const type = document.getElementById("tripType").value;
+  const country = document.getElementById("tripCountry").value;
+  const startDate = document.getElementById("startDate").value;
+  const endDate = document.getElementById("endDate").value;
+  const groupSize = document.getElementById("groupSize").value;
+
+  // Collect checkboxes from all dropdowns
+  const preferences = [];
+  document.querySelectorAll('.our_trip_package_dropdown_content input[type="checkbox"]:checked')
+    .forEach(cb => preferences.push(cb.value));
+
+  // Collect radios
+  const location = document.querySelector('input[name="location"]:checked')?.value || "";
+  const style = document.querySelector('input[name="style"]:checked')?.value || "";
+
+  if (!type || !startDate || !endDate || !groupSize || (type === "International" && !country)) {
+    alert("⚠️ Please fill in all required fields");
+    return;
+  }
+
+  let destination = type;
+  if (type === "International") destination += " - " + country;
+
+  const message =
+    `*New Trip Request*\n\n` +
+    `🌍 Destination: ${destination}\n` +
+    `📅 Dates: ${startDate} to ${endDate}\n` +
+    `👥 Group Size: ${groupSize}\n` +
+    `📌 Location Type: ${location || "Not specified"}\n` +
+    `💼 Travel Style: ${style || "Not specified"}\n` +
+    `🎯 Preferences: ${preferences.length ? preferences.join(", ") : "No specific preference"}`;
+
+  const phoneNumber = "60198676680"; // Replace with your WhatsApp number
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+}
 </script>
 
 <script>
